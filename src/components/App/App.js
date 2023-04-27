@@ -9,6 +9,7 @@ import Courses from "../Courses/CoursesList/courses";
 import LoginPage from "../Auth/login";
 import RegisterPage from "../Auth/register";
 import StudyhutService from "../../repository/studyhutRepository";
+import AddComplaint from "../Complaints/ComplaintAdd/addComplaint.js";
 
 class App extends Component {
     constructor(props) {
@@ -46,6 +47,8 @@ class App extends Component {
                                element={<LoginPage/>}/>
                         <Route path="/register"
                                element={<RegisterPage/>}/>
+                        <Route path="/complaint"
+                               element={<AddComplaint/>}/>
                     </Routes>
                 </main>
             </BrowserRouter>
@@ -149,7 +152,6 @@ class App extends Component {
                 this.loadComplaints();
             });
     }
-
 
 }
 
